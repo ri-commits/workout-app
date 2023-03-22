@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout app</title>
+    <link rel="stylesheet" href="src/css/main.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Archivo+Black&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+    <script defer type="module" src="src/js/controler.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <main class="testimonial-grid">
+      <header class="testimonial grid-col-span-6">
+        <ul class="header-list">
+          <li class="logo"></li>
+          <li>Hello Richard!</li>
+        </ul>
+      </header>
+
+      <div class="testimonial trening-day grid-col-span-2">
+        <div class="day">
+          <h1>Day 7</h1>
+          <p>Cardio</p>
+        </div>
+        <div class="day">
+          <h1>Day 1</h1>
+          <p>Upper power</p>
+        </div>
+        <div class="day">
+          <h1>Day 2</h1>
+          <p>Lower Power</p>
+        </div>
+        <div class="day">
+          <h1>Day 3</h1>
+          <p>Cardio</p>
+        </div>
+        <div class="day">
+          <h1>Day 4</h1>
+          <p>Upper power</p>
+        </div>
+        <div class="day">
+          <h1>Day 5</h1>
+          <p>Lower power</p>
+        </div>
+        <div class="day">
+          <h1>Day 6</h1>
+          <p>Cardio</p>
+        </div>
+
+        <button class="slider__btn slider__btn--left hidden">&larr;</button>
+        <button class="slider__btn slider__btn--right hidden">&rarr;</button>
+      </div>
+
+      <div class="testimonial goal grid-col-span-4">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <div class="testimonial plan grid-col-span-3">
+        <h1>Plan</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>exercise</th>
+              <th>set</th>
+              <th>rep</th>
+              <th>wght</th>
+            </tr>
+          </thead>
+          <tbody id="workout"></tbody>
+        </table>
+      </div>
+
+      <div class="testimonial statistics grid-col-span-3">
+        <ul class="statistics-list hidden">
+          <li class="today">Today</li>
+          <li class="week">Week</li>
+          <li class="mounth">Mounth</li>
+          <li class="year">Year</li>
+        </ul>
+        <div class="history"></div>
+      </div>
+    </main>
+  </body>
+</html>
