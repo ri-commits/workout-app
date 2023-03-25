@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-full m-0 p-0 font-inherit box-border text-base">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Workout app</title>
-    <link rel="stylesheet" href="src/css/main.css" />
+    <link rel="stylesheet" href="src/index.css" />
 
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Archivo+Black&family=Russo+One&display=swap"
@@ -14,70 +14,112 @@
     <script defer type="module" src="src/js/controler.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
-  <body>
-    <main class="testimonial-grid">
-      <header class="testimonial grid-col-span-6">
-        <ul class="header-list">
+  <body
+    class="h-full font-sans font-normal leading-relaxed text-white bg-black"
+  >
+    <main class="grid gap-4 p-6 w-11/12 min-h-[90%] mx-auto">
+      <header class="rounded-md font-black text-3xl">
+        <ul class="header-list list-none">
           <li class="logo"></li>
           <li>Hello Richard!</li>
         </ul>
       </header>
 
-      <div class="testimonial trening-day grid-col-span-2">
-        <div class="day">
+      <div
+        class="rounded-2xl min-h-[5rem] bg-yellow-400 text-black font-russo font-bold h-min-[5rem] text-lg relative overflow-hidden"
+      >
+        <div
+          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+        >
+          <!-- <div class="day"> -->
           <h1>Day 7</h1>
           <p>Cardio</p>
         </div>
-        <div class="day">
+        <div
+          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+        >
           <h1>Day 1</h1>
           <p>Upper power</p>
         </div>
-        <div class="day">
+        <div
+          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+        >
           <h1>Day 2</h1>
           <p>Lower Power</p>
         </div>
-        <div class="day">
+        <div
+          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+        >
           <h1>Day 3</h1>
           <p>Cardio</p>
         </div>
-        <div class="day">
+        <div
+          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+        >
           <h1>Day 4</h1>
           <p>Upper power</p>
         </div>
-        <div class="day">
+        <div
+          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+        >
           <h1>Day 5</h1>
           <p>Lower power</p>
         </div>
-        <div class="day">
+        <div
+          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+        >
           <h1>Day 6</h1>
           <p>Cardio</p>
         </div>
 
-        <button class="slider__btn slider__btn--left hidden">&larr;</button>
-        <button class="slider__btn slider__btn--right hidden">&rarr;</button>
+        <!-- <button class="slider__btn slider__btn--left hidden">&larr;</button> -->
+        <button
+          class="left-1 -translate-y-1/2 absolute top-1/2 z-10 cursor-pointer h-8 w-8"
+        >
+          &larr;
+        </button>
+        <button
+          class="right-1 -translate-y-1/2 absolute top-1/2 z-10 cursor-pointer h-8 w-8"
+        >
+          &rarr;
+        </button>
       </div>
 
-      <div class="testimonial goal grid-col-span-4">
+      <div class="rounded-2xl relative bg-purple-500">
         <canvas id="myChart"></canvas>
       </div>
 
-      <div class="testimonial plan grid-col-span-3">
-        <h1>Plan</h1>
-        <table>
-          <thead>
-            <tr>
+      <div
+        class="rounded-2xl bg-yellow-400 text-black font-bold text-base transition-all duration-500"
+      >
+        <h1 class="font-archivo text-lg pl-3">Plan</h1>
+        <table class="w-full border-collapse">
+          <thead class="border-b-2 border-gray-300">
+            <tr class="bg-amber-600">
               <th>exercise</th>
               <th>set</th>
               <th>rep</th>
               <th>wght</th>
             </tr>
           </thead>
-          <tbody id="workout"></tbody>
+          <tbody id="workout">
+            <tr class="exercise">
+              <td>
+                <img
+                  class="inline-block w-5"
+                  src="src/img/icons/biceps.png"
+                />Dumbel bench press
+              </td>
+              <td data-exercise="${exercise.ex_name}" data-type="sets">4</td>
+              <td data-exercise="${exercise.ex_name}" data-type="reps">12</td>
+              <td data-exercise="${exercise.ex_name}" data-type="weight">60</td>
+            </tr>
+          </tbody>
         </table>
       </div>
 
-      <div class="testimonial statistics grid-col-span-3">
-        <ul class="statistics-list hidden">
+      <div class="rounded-2xl bg-lime-500 relative">
+        <ul class="flex place-content-around text-base">
           <li class="today">Today</li>
           <li class="week">Week</li>
           <li class="mounth">Mounth</li>
