@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Archivo+Black&family=Russo+One&display=swap"
       rel="stylesheet"
     />
-    <script defer type="module" src="src/js/controler.js"></script>
+    <script defer type="module" src="src/js/view.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body
@@ -26,47 +26,47 @@
       </header>
 
       <div
-        class="rounded-2xl min-h-[5rem] bg-yellow-400 text-black font-russo font-bold h-min-[5rem] text-lg relative overflow-hidden"
+        class="trening-day rounded-2xl min-h-[5rem] bg-yellow-400 text-black font-russo font-bold h-min-[5rem] text-lg relative overflow-hidden"
       >
         <div
-          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+          class="day absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
         >
           <!-- <div class="day"> -->
           <h1>Day 7</h1>
           <p>Cardio</p>
         </div>
         <div
-          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+          class="day absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
         >
           <h1>Day 1</h1>
           <p>Upper power</p>
         </div>
         <div
-          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+          class="day absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
         >
           <h1>Day 2</h1>
           <p>Lower Power</p>
         </div>
         <div
-          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+          class="day absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
         >
           <h1>Day 3</h1>
           <p>Cardio</p>
         </div>
         <div
-          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+          class="day absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
         >
           <h1>Day 4</h1>
           <p>Upper power</p>
         </div>
         <div
-          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+          class="day absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
         >
           <h1>Day 5</h1>
           <p>Lower power</p>
         </div>
         <div
-          class="absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
+          class="day absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
         >
           <h1>Day 6</h1>
           <p>Cardio</p>
@@ -74,12 +74,12 @@
 
         <!-- <button class="slider__btn slider__btn--left hidden">&larr;</button> -->
         <button
-          class="left-1 -translate-y-1/2 absolute top-1/2 z-10 cursor-pointer h-8 w-8"
+          class="slider__btn--left left-1 -translate-y-1/2 absolute top-1/2 z-10 cursor-pointer h-8 w-8"
         >
           &larr;
         </button>
         <button
-          class="right-1 -translate-y-1/2 absolute top-1/2 z-10 cursor-pointer h-8 w-8"
+          class="slider__btn--right right-1 -translate-y-1/2 absolute top-1/2 z-10 cursor-pointer h-8 w-8"
         >
           &rarr;
         </button>
@@ -110,7 +110,13 @@
                   src="src/img/icons/biceps.png"
                 />Dumbel bench press
               </td>
-              <td data-exercise="${exercise.ex_name}" data-type="sets">4</td>
+              <td
+                class="cursor-pointer"
+                data-exercise="${exercise.ex_name}"
+                data-type="sets"
+              >
+                4
+              </td>
               <td data-exercise="${exercise.ex_name}" data-type="reps">12</td>
               <td data-exercise="${exercise.ex_name}" data-type="weight">60</td>
             </tr>
