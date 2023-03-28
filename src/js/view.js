@@ -102,7 +102,7 @@ const genetatePlan = function () {
     return `
     <tr class="exercise">
       <td>
-        <img class="icons" src=${exercise.icon} />${exercise.ex_name}
+        <img class="inline w-4 max-w-full" src=${exercise.icon} />${exercise.ex_name}
       </td>
       <td class="cursor-pointer" data-exercise="${exercise.ex_name}" data-type="sets">${exercise.sets}</td>
       <td class="cursor-pointer" data-exercise="${exercise.ex_name}" data-type="reps">${exercise.reps}</td>
@@ -182,6 +182,7 @@ const renderExerciseData = function (e) {
     const inputElement = document.createElement("input");
     inputElement.type = "number";
     inputElement.value = workoutEl.textContent.trim();
+    inputElement.classList.add("w-12");
     workoutEl.replaceWith(inputElement);
     inputElement.focus();
 
@@ -230,8 +231,8 @@ const genetateHistory = function () {
 
   for (let i = 0; i < indexes.length; i++) {
     html += `
-    <div class="history_day">
-            <ul>
+    <div class="bg-lime-700/50 text-xl font-medium p-4 m-4 rounded-2xl">
+            <ul class="flex justify-around opacity-1">
               <li>${dates[i]}</li>
               <li>${indexes[i]}</li>
             </ul>

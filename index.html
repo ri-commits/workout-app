@@ -15,10 +15,10 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body
-    class="h-full font-sans font-normal leading-relaxed text-white bg-black"
+    class="h-full font-sans font-normal leading-relaxed text-white bg-black m-0 p-0"
   >
-    <main class="grid gap-4 p-6 w-11/12 min-h-[90%] mx-auto">
-      <header class="rounded-md font-black text-3xl">
+    <main class="grid gap-4 p-0 w-11/12 min-h-[90%] mx-auto">
+      <header class="rounded-md font-black text-5xl">
         <ul class="header-list list-none">
           <li class="logo"></li>
           <li>Hello Richard!</li>
@@ -26,7 +26,7 @@
       </header>
 
       <div
-        class="trening-day rounded-2xl min-h-[5rem] bg-yellow-400 text-black font-russo font-bold h-min-[5rem] text-lg relative overflow-hidden"
+        class="trening-day rounded-2xl min-h-[5rem] bg-yellow-400 text-black font-russo font-bold h-min-[5rem] text-2xl relative overflow-hidden"
       >
         <div
           class="day absolute min-w-full flex items-center justify-center flex-col uppercase duration-1000"
@@ -90,7 +90,7 @@
       </div>
 
       <div
-        class="rounded-2xl bg-yellow-400 text-black font-bold text-base transition-all duration-500"
+        class="rounded-2xl bg-yellow-400 text-black font-bold text-xl transition-all duration-500"
       >
         <h1 class="font-archivo text-lg pl-3">Plan</h1>
         <table class="w-full border-collapse">
@@ -102,30 +102,12 @@
               <th>wght</th>
             </tr>
           </thead>
-          <tbody id="workout">
-            <tr class="exercise">
-              <td>
-                <img
-                  class="inline-block w-5"
-                  src="src/img/icons/biceps.png"
-                />Dumbel bench press
-              </td>
-              <td
-                class="cursor-pointer"
-                data-exercise="${exercise.ex_name}"
-                data-type="sets"
-              >
-                4
-              </td>
-              <td data-exercise="${exercise.ex_name}" data-type="reps">12</td>
-              <td data-exercise="${exercise.ex_name}" data-type="weight">60</td>
-            </tr>
-          </tbody>
+          <tbody id="workout"></tbody>
         </table>
       </div>
 
       <div class="rounded-2xl bg-lime-500 relative">
-        <ul class="flex place-content-around text-base">
+        <ul class="flex place-content-around text-base hidden">
           <li class="today">Today</li>
           <li class="week">Week</li>
           <li class="mounth">Mounth</li>
